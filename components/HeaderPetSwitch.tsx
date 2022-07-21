@@ -20,6 +20,7 @@ const StyledContainer = styled.div`
   background-color: rgb(241, 243, 245);
   border-radius: 1rem;
   cursor: pointer;
+  user-select: none;
 `;
 const SwtichButton = styled.div<StyledProps>`
   display: flex;
@@ -31,15 +32,10 @@ const SwtichButton = styled.div<StyledProps>`
   background-color: rgb(20, 130, 255);
   border-radius: 1rem;
   transform: ${({ toggle }) => (toggle ? `translateX(0%)` : `translateX(40%)`)};
-  /* transition: transform 0.1s linear; */
 `;
 const SwitchContent = styled.div<StyledProps>`
   display: ${({ toggle }) => (toggle ? "flex" : "none")};
   font-size: 12px;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
   font-weight: 600;
   line-height: 18.858px;
   & span {
