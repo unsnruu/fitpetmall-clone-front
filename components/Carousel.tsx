@@ -6,11 +6,12 @@ import styled from "@emotion/styled";
 import useInterval from "hooks/useInterval";
 
 const Container = styled.div`
-  height: 45.8vw;
+  height: 48.5vw;
   background-color: aqua;
   position: relative;
   overflow: hidden;
   margin-top: 6rem;
+  margin-bottom: 0.5rem;
 `;
 const Item = styled.div<{ index: number }>`
   position: absolute;
@@ -36,16 +37,10 @@ function Carousel() {
   }, 2000);
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div style={{ margin: "0 1rem", padding: "0.5rem 0" }}>
       <Container>
         <Item index={index}>
-          <Image
-            src={"/banner-images/abcde.jpeg"}
-            width="100"
-            height="100"
-            layout="fill"
-            alt=""
-          />
+          <Image src={"/banner-images/abcde.jpeg"} layout="fill" alt="" />
         </Item>
         <Item index={index + 1}>B</Item>
         <Item index={index + 2}>C</Item>
