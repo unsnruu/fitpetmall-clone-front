@@ -8,12 +8,13 @@ import Image from "next/image";
 import hamburgerSrc from "../public/icons/ic_new_hamburger.svg";
 import cartSrc from "../public/icons/ic_new_cart.svg";
 
-const StyleContainer = styled.div`
+const StyleContainer = styled.div<{ expanded: boolean }>`
   background-color: white;
   width: 100vw;
   position: fixed;
-  top: 0;
+  top: ${({ expanded }) => (expanded ? 0 : `-60px`)};
   z-index: 99999;
+  transition: all 0.4s;
 `;
 const UpperContainer = styled.div`
   width: 100%;
@@ -25,10 +26,13 @@ const UpperContainer = styled.div`
 const IconWrapper = styled.div`
   padding: 0 5px;
 `;
+interface HeaderProps {
+  expanded: boolean;
+}
 
-function Header() {
+function Header({ expanded }: HeaderProps) {
   return (
-    <StyleContainer>
+    <StyleContainer expanded={expanded}>
       <UpperContainer>
         <HeaderPetSwitch />
         <SearchBox />
