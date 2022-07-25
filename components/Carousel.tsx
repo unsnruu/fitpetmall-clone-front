@@ -1,53 +1,90 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styled from "@emotion/styled";
+import qs from "qs";
 
 import useInterval from "hooks/useInterval";
+import { API_URL } from "../config";
+import { StrapiReturn, ImageAttr, StrapiData } from "../types";
 
 const Container = styled.div`
   height: 48.5vw;
-  background-color: aqua;
+  background-color: transparent;
   position: relative;
   overflow: hidden;
-  margin-top: 6rem;
-  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 6rem 1rem 0.5rem 1rem;
 `;
-const Item = styled.div<{ index: number }>`
+
+const Item = styled.div<{ visible: number }>`
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: green;
-  border-radius: 0.5rem;
-  transform: ${({ index }) => `translateX(${index * 100}%)`};
+  background-color: white;
+  border-radius: 1rem;
+  transform: ${({ visible }) => `translateX(${visible * 100}%)`};
   overflow: hidden;
 `;
 
+interface EventAttr {
+  text: string;
+  image: StrapiReturn<ImageAttr>;
+}
+
 function Carousel() {
-  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(0);
+  const [raws, setRaws] = useState<StrapiData<EventAttr>[]>([]);
+  const [images, setImages] = useState<ImageAttr[]>();
+
+  useEffect(() => {
+    const getImages = async () => {
+      const res = await fetch(`${API_URL}/events?populate[0]=image`);
+      const { data } = (await res.json()) as StrapiReturn<EventAttr>;
+
+      if (Array.isArray(data)) {
+        setRaws(data);
+      }
+    };
+
+    getImages();
+  }, []);
+
+  useEffect(() => {
+    const images = raws.map(({ attributes }) => {
+      const { image } = attributes;
+      const { data: imageData } = image as StrapiReturn<ImageAttr>;
+      if (!Array.isArray(imageData)) {
+        const { attributes } = imageData;
+        return attributes;
+      } else {
+        throw new Error(`failed to manufacture image`);
+      }
+    });
+    setImages(images);
+  }, [raws]);
+
   useInterval(() => {
-    setIndex((prev) => {
-      if (prev > -4) {
+    if (!images) return;
+
+    setVisible((prev) => {
+      if (prev > -images.length + 1) {
         return prev - 1;
       } else {
         return 0;
       }
     });
-  }, 2000);
+  }, 1000);
 
   return (
-    <div style={{ margin: "0 1rem", padding: "0.5rem 0" }}>
-      <Container>
-        <Item index={index}>
-          <Image src={"/banner-images/abcde.jpeg"} layout="fill" alt="" />
+    <Container>
+      {images?.map(({ formats, caption }, index) => (
+        <Item key={caption} visible={visible + index}>
+          <Image src={formats.medium.url} layout="fill" alt={caption} />
         </Item>
-        <Item index={index + 1}>B</Item>
-        <Item index={index + 2}>C</Item>
-        <Item index={index + 3}>D</Item>
-        <Item index={index + 4}>E</Item>
-      </Container>
-    </div>
+      ))}
+    </Container>
   );
 }
 
