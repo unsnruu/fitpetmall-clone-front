@@ -19,7 +19,7 @@ const StyledList = styled.ul`
 const StyledAnchor = styled.a`
   font-size: 14px;
   font-weight: 600;
-  color: rgb(134, 142, 150);
+  color: ${({ theme }) => theme.color.deepGray};
   margin: 0.5rem;
   cursor: pointer;
 `;
@@ -38,7 +38,7 @@ interface NavItem {
   url: string;
 }
 
-function Navigation() {
+function HeaderNav() {
   const navItems: NavItem[] = [
     { text: "홈", url: "/" },
     { text: "베스트", url: "/home/bestseller" },
@@ -64,4 +64,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default HeaderNav;

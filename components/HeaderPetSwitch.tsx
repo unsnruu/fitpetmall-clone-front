@@ -41,8 +41,8 @@ const SwitchContent = styled.div<StyledProps>`
   & span {
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    color: white;
   }
-  color: white;
 `;
 const ContainerIcon = styled.div<StyledProps>`
   position: absolute;

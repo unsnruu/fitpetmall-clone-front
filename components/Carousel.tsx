@@ -9,7 +9,6 @@ import { StrapiReturn, ImageAttr, StrapiData } from "../types";
 
 const Container = styled.div`
   height: 48.5vw;
-  background-color: transparent;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -75,7 +74,7 @@ function Carousel() {
         return 0;
       }
     });
-  }, 1000);
+  }, 3000);
 
   return (
     <Container>

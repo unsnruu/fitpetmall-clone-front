@@ -7,7 +7,7 @@ const Container = styled.div`
 const Item = styled.div`
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.color.gray};
+  background-color: rgb(242, 248, 255);
   border-radius: 0.5rem;
   font-size: 16px;
   font-weight: 700;

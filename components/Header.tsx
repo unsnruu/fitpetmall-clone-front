@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
+import Link from "next/link";
 
 import HeaderPetSwitch from "./HeaderPetSwitch";
-import HeaderMenus from "./Navigation";
+import HeaderMenus from "./HeaderNav";
 import SearchBox from "./SearchBox";
-import Image from "next/image";
 
 import hamburgerSrc from "../public/icons/ic_new_hamburger.svg";
 import cartSrc from "../public/icons/ic_new_cart.svg";
@@ -14,7 +15,7 @@ const StyleContainer = styled.div<{ expanded: boolean }>`
   position: fixed;
   top: ${({ expanded }) => (expanded ? 0 : `-60px`)};
   z-index: 99999;
-  transition: all 0.4s;
+  transition: top 0.4s 0.3s;
 `;
 const UpperContainer = styled.div`
   width: 100%;
@@ -37,7 +38,11 @@ function Header({ expanded }: HeaderProps) {
         <HeaderPetSwitch />
         <SearchBox />
         <IconWrapper>
-          <Image src={hamburgerSrc} alt="category menu" />
+          <Link href="/home/category">
+            <a>
+              <Image src={hamburgerSrc} alt="category menu" />
+            </a>
+          </Link>
         </IconWrapper>
         <IconWrapper>
           <Image src={cartSrc} alt="cart" />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import searchSrc from "../public/icons/ic_new_search.svg";
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.a`
   flex-grow: 1;
   padding: 0 10px 0 20px;
   height: 2rem;
@@ -14,6 +14,7 @@ const StyledContainer = styled.div`
   margin-left: 10px;
   background-color: ${({ theme }) => theme.color.gray};
   border-radius: 1rem;
+  cursor: pointer;
 `;
 const PlaceHolder = styled.span`
   font-size: 14px;
@@ -22,14 +23,12 @@ const PlaceHolder = styled.span`
 
 function SearchBox() {
   return (
-    <StyledContainer>
-      <Link href="/search">
-        <>
-          <PlaceHolder>검색어를 입력해 주세요!</PlaceHolder>
-          <Image src={searchSrc} alt="search" />
-        </>
-      </Link>
-    </StyledContainer>
+    <Link href="/search">
+      <StyledContainer>
+        <PlaceHolder>검색어를 입력해 주세요!</PlaceHolder>
+        <Image src={searchSrc} alt="search" />
+      </StyledContainer>
+    </Link>
   );
 }
 export default SearchBox;

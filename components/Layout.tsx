@@ -1,10 +1,5 @@
-import React, {
-  PropsWithChildren,
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-} from "react";
+import React, { PropsWithChildren, useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 
 import Head from "next/head";
 import Header from "./Header";
@@ -16,23 +11,26 @@ interface LayoutProps extends PropsWithChildren {
 }
 
 export default function Layout({ title, children }: LayoutProps) {
-  const [position, setPosition] = useState(0);
-  const [expanded, setExpanded] = useState(false);
+  const router = useRouter();
+
+  const position = useRef(0);
+  const [expanded, setExpanded] = useState(true);
+
+  const throttled = useRef(
+    throttle(() => {
+      let moving = window.scrollY;
+      setExpanded(position.current > moving);
+      position.current = moving;
+    })
+  );
 
   useEffect(() => {
-    const handleScroll = () => {
-      let moving = window.scrollY;
-      console.log("adsfasdf");
-      setExpanded(position > moving);
-      setPosition(moving);
-    };
-    const throttledHandleScroll = throttle(handleScroll);
-    window.addEventListener("scroll", throttledHandleScroll);
-
+    const handleScroll = throttled.current;
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [position]);
+  }, []);
 
   return (
     <div>
@@ -41,7 +39,7 @@ export default function Layout({ title, children }: LayoutProps) {
       </Head>
       <Header expanded={expanded} />
       {children}
-      <Footer />
+      {router.pathname === "/" && <Footer />}
     </div>
   );
 }
