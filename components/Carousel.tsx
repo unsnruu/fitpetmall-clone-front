@@ -13,7 +13,7 @@ const Container = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
-  margin: 6rem 1rem 0.5rem 1rem;
+  margin: 0rem 1rem 0.5rem 1rem;
 `;
 
 const Item = styled.div<{ visible: number }>`
