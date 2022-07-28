@@ -9,7 +9,7 @@ import Carousel from "@components/Carousel";
 import Divider from "@components/Divider";
 import EventBanner from "@components/EventBanner";
 import Layout from "@components/Layout";
-import ListHomeSection from "@components/CategorySection";
+import CategorySection from "@components/CategorySection";
 import NewProductSection from "@components/NewProductSection";
 import RecommendSection from "@components/RecommendSection";
 import TimeSalesSection from "@components/TimeSaleSection";
@@ -25,17 +25,18 @@ interface HomepageProps {
 }
 
 export default function HomePage({ items }: HomepageProps) {
-  console.log(items);
   return (
     <Layout>
-      <Carousel />
-      <EventBanner />
-      <ListHomeSection />
-      <Divider />
-      <TimeSalesSection items={items} />
-      <Divider />
-      <RecommendSection />
-      <NewProductSection />
+      <main style={{ paddingTop: "129px" }}>
+        <Carousel />
+        <EventBanner />
+        <CategorySection />
+        <Divider />
+        <TimeSalesSection items={items} />
+        <Divider />
+        <RecommendSection />
+        <NewProductSection />
+      </main>
     </Layout>
   );
 }
