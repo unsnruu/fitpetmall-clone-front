@@ -12,8 +12,8 @@ const Header = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 0 1px 1px 0.1px ${({ theme }) => theme.color.gray};
-  margin: 0 1rem;
+  box-shadow: 0 1px 1px 1px rgb(233, 236, 239);
+  padding: 0 1rem;
 `;
 const ImageWrapper = styled.a`
   width: 50%;
