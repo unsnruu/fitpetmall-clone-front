@@ -22,7 +22,6 @@ const Container = styled.div`
 `;
 
 const ArticleContainer = styled.div<{ visible: number }>`
-  width: 100%;
   transform: ${({ visible }) => `translateX(-${visible * 100}%)`};
   transition: transform 0.1s linear;
 `;
