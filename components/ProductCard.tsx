@@ -14,7 +14,6 @@ const Container = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
   margin-bottom: 0.5rem;
-  margin-right: 1rem;
 `;
 
 interface ProductCardProps {
