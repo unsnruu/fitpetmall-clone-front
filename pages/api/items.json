@@ -1,0 +1,172 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "price": 10000,
+        "discount": 10,
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img1",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/items/무자기_썸네일_1_ezwyhv.jpeg"
+                },
+                "medium": {
+                  "url": "/items/무자기_썸네일_1_ezwyhv.jpeg"
+                },
+                "large": {
+                  "url": "/items/무자기_썸네일_1_ezwyhv.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "attributes": {
+        "name": "[1개/3개/5개] 마이베프 통살파티 닭가슴살 22g",
+        "price": 14000,
+        "discount": 20,
+        "image": {
+          "data": {
+            "id": "2",
+            "attributes": {
+              "name": "img2",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/items/수정완료_썸네일_마이베프_닭가슴살_1개입1_aywmmy.jpeg"
+                },
+                "medium": {
+                  "url": "/items/수정완료_썸네일_마이베프_닭가슴살_1개입1_aywmmy.jpeg"
+                },
+                "large": {
+                  "url": "/items/수정완료_썸네일_마이베프_닭가슴살_1개입1_aywmmy.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "attributes": {
+        "name": "스테이웰 멀티비타민&미네랄 웨이트케어 (60g)",
+        "price": 31000,
+        "discount": 5,
+        "image": {
+          "data": {
+            "id": "3",
+            "attributes": {
+              "name": "img3",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/items/수정완료_썸네일_스테이웰_웨이트케어_escoeg.jpeg"
+                },
+                "medium": {
+                  "url": "/items/수정완료_썸네일_스테이웰_웨이트케어_escoeg.jpeg"
+                },
+                "large": {
+                  "url": "/items/수정완료_썸네일_스테이웰_웨이트케어_escoeg.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "attributes": {
+        "name": "듀먼 야채콕콕 닭고기 트릿 50g",
+        "price": 9000,
+        "discount": 10,
+        "image": {
+          "data": {
+            "id": "4",
+            "attributes": {
+              "name": "img4",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/items/야채콕콕_썸네일_ldqqsb.jpeg"
+                },
+                "medium": {
+                  "url": "/items/야채콕콕_썸네일_ldqqsb.jpeg"
+                },
+                "large": {
+                  "url": "/items/야채콕콕_썸네일_ldqqsb.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "5",
+      "attributes": {
+        "name": "칸타나 동결건조 치킨텐더 리필팩 (300g)",
+        "price": 21000,
+        "discount": 30,
+        "image": {
+          "data": {
+            "id": "5",
+            "attributes": {
+              "name": "img5",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/items/치킨텐더_300g_idpvfw.jpeg"
+                },
+                "medium": {
+                  "url": "/items/치킨텐더_300g_idpvfw.jpeg"
+                },
+                "large": {
+                  "url": "/items/치킨텐더_300g_idpvfw.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "6",
+      "attributes": {
+        "name": "후코홀릭 독 후코이단 (120g)",
+        "price": "3000",
+        "discount": 0,
+        "image": {
+          "data": {
+            "id": "6",
+            "attributes": {
+              "name": "img6",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/items/후코이단_썸네일_1_irjvfb.jpeg"
+                },
+                "medium": {
+                  "url": "/items/후코이단_썸네일_1_irjvfb.jpeg"
+                },
+                "large": {
+                  "url": "/items/후코이단_썸네일_1_irjvfb.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
