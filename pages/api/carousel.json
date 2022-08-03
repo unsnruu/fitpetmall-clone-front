@@ -1,0 +1,160 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img1",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/banner/건강하자묘_메인배너_02_7d85ff_220711_wackmx copy.jpeg"
+                },
+                "medium": {
+                  "url": "/banner/건강하자묘_메인배너_02_7d85ff_220711_wackmx copy.jpeg"
+                },
+                "large": {
+                  "url": "/banner/건강하자묘_메인배너_02_7d85ff_220711_wackmx copy.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img2",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/banner/건강하자묘_메인배너_03_feff7d_220711_vrvxty.jpeg"
+                },
+                "medium": {
+                  "url": "/banner/건강하자묘_메인배너_03_feff7d_220711_vrvxty.jpeg"
+                },
+                "large": {
+                  "url": "/banner/건강하자묘_메인배너_03_feff7d_220711_vrvxty.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img1",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/banner/금토일특가_메인배너_강_ff778d_220715_wssfyq.jpeg"
+                },
+                "medium": {
+                  "url": "/banner/금토일특가_메인배너_강_ff778d_220715_wssfyq.jpeg"
+                },
+                "large": {
+                  "url": "/banner/금토일특가_메인배너_강_ff778d_220715_wssfyq.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img1",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/banner/더텐_메인배너_fbf4ee_220705_hripvf.jpeg"
+                },
+                "medium": {
+                  "url": "/banner/더텐_메인배너_fbf4ee_220705_hripvf.jpeg"
+                },
+                "large": {
+                  "url": "/banner/더텐_메인배너_fbf4ee_220705_hripvf.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "5",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img1",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/banner/무무-슈퍼쉴드스프레이_메인배너_opzeyz.jpeg"
+                },
+                "medium": {
+                  "url": "/banner/무무-슈퍼쉴드스프레이_메인배너_opzeyz.jpeg"
+                },
+                "large": {
+                  "url": "/banner/무무-슈퍼쉴드스프레이_메인배너_opzeyz.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "6",
+      "attributes": {
+        "name": "[핏펫x무자기] 기능성 세라믹 식기 + 실리콘 매트",
+        "image": {
+          "data": {
+            "id": "1",
+            "attributes": {
+              "name": "img1",
+              "url": "",
+              "formats": {
+                "small": {
+                  "url": "/banner/브랜드-푸치앤머트_메인배너_윤_220706_xlozwz.jpeg"
+                },
+                "medium": {
+                  "url": "/banner/브랜드-푸치앤머트_메인배너_윤_220706_xlozwz.jpeg"
+                },
+                "large": {
+                  "url": "/banner/브랜드-푸치앤머트_메인배너_윤_220706_xlozwz.jpeg"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
