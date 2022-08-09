@@ -1,3 +1,4 @@
+//https://velog.io/@ansrjsdn/TypeScript%EC%97%90%EC%84%9C-useDebounce-useThrottle-%EB%A7%8C%EB%93%A4%EA%B8%B0
 import { useRef } from "react";
 
 function useThrottle<T extends any[]>(
