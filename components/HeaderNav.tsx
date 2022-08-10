@@ -1,35 +1,30 @@
 import Link from "next/link";
 import styled from "@emotion/styled";
+import ScrollContainer from "react-indiana-drag-scroll";
 
-//todo
-//media query 적용하기
-const StyledContainer = styled.div`
+const Container = styled.div`
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin-left: 1rem;
-`;
-const StyledList = styled.ul`
-  width: max-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
+  margin: 0 6px;
+  overflow: auto;
 `;
 const StyledAnchor = styled.a`
   font-size: 14px;
   font-weight: 600;
   color: ${({ theme }) => theme.color.deepGray};
   margin: 0.5rem;
+
   cursor: pointer;
 `;
+
 const SmogDecoration = styled.div`
   width: 10%;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  box-shadow: -10px 0px 10px inset white;
+  box-shadow: -10px 0px 10px 5px inset white;
   z-index: 1;
 `;
 
@@ -51,16 +46,25 @@ function HeaderNav() {
   ];
 
   return (
-    <StyledContainer>
-      <StyledList>
-        {navItems.map(({ text, url }) => (
-          <Link key={text} href={url}>
-            <StyledAnchor>{text}</StyledAnchor>
-          </Link>
-        ))}
-      </StyledList>
+    <Container>
+      <ScrollContainer>
+        <div
+          style={{
+            width: "max-content",
+            height: "45px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {navItems.map(({ text, url }) => (
+            <Link href={url} key={text}>
+              <StyledAnchor>{text}</StyledAnchor>
+            </Link>
+          ))}
+        </div>
+      </ScrollContainer>
       <SmogDecoration />
-    </StyledContainer>
+    </Container>
   );
 }
 
