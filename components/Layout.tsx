@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-import throttle from "utils/throttle";
+import { throttle } from "lodash";
 
 interface LayoutProps extends PropsWithChildren {
   title?: string;
