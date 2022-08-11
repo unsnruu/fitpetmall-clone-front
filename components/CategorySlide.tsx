@@ -2,32 +2,44 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 
 import type { IconData } from "./CategorySection";
-//todo : gap 설정을 media-query에 따라서 설정하기
-const Container = styled.div`
+
+const Container = styled.div<{ visible: number; index: number }>`
   display: grid;
-  align-items: center;
-  margin: 0 63px;
   height: 200px;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 2em;
+  position: absolute;
+  width: 100%;
+  /* border: 1px solid red; */
+  padding: 0 36px;
+  transform: ${({ index, visible }) =>
+    `translateX(${(index - visible) * 100}%)`};
+  transition: transform 200ms;
   @media (max-width: 576px) {
     gap: 0;
   }
 `;
 interface CategoryArticleProps {
   icon: IconData[];
+  visible: number;
+  index: number;
 }
 
-export default function CategorySlide({ icon }: CategoryArticleProps) {
+export default function CategorySlide({
+  icon,
+  visible,
+  index,
+}: CategoryArticleProps) {
   return (
-    <Container>
+    <Container visible={visible} index={index}>
       {icon.map(({ id, name, path }) => {
         return <IconItem key={id} id={id} path={path} name={name}></IconItem>;
       })}
     </Container>
   );
 }
-
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 const ItemContainer = styled.div`
   width: 86px;
   height: 86px;
@@ -35,6 +47,7 @@ const ItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 `;
 const Title = styled.div`
   color: ${({ theme }) => theme.color.deepGray};
@@ -47,31 +60,6 @@ interface IconItemProps extends IconData {
   size?: "default" | "small";
 }
 function IconItem({ name, path }: IconItemProps) {
-  // if (size === "small") {
-  //   return (
-  //     <ItemContainer>
-  //       <div
-  //         style={{
-  //           width: 60,
-  //           height: 60,
-  //           display: "flex",
-  //           alignItems: "center",
-  //           justifyContent: "center",
-  //         }}
-  //       >
-  //         <Image
-  //           src={imgSrc}
-  //           layout="fixed"
-  //           alt={title + "icon"}
-  //           width="32"
-  //           height="32"
-  //         />
-  //       </div>
-  //       <Title>{title}</Title>
-  //     </ItemContainer>
-  //   );
-  // }
-
   return (
     <ItemContainer>
       <Image
@@ -80,6 +68,7 @@ function IconItem({ name, path }: IconItemProps) {
         alt={name + "icon"}
         width="60"
         height="60"
+        draggable="false"
       />
       <Title>{name}</Title>
     </ItemContainer>

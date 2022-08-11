@@ -1,63 +1,81 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import type { GetServerSideProps } from "next";
 
-import CategoryArticle from "./CategoryArticle";
+import CategorySlide from "./CategorySlide";
 import CategoryNav from "./CategoryNav";
 
-import puppyIcon from "../public/icons/ic_dog_퍼피.svg";
-import adultIcon from "../public/icons/ic_dog_어덜트.svg";
-import seniorIcon from "../public/icons/ic_dog_시니어.svg";
-import dryIcon from "../public/icons/ic_dog_건식.svg";
-import softIcon from "../public/icons/ic_dog_소프트.svg";
-import wetIcon from "../public/icons/ic_dog_화식.svg";
-import freezedIcon from "../public/icons/ic_dog_동결건조.svg";
-import moreIcon from "../public/icons/ic_plus.svg";
-
 const Container = styled.div`
-  height: 17rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 17rem; ;
 `;
-
-const ArticleContainer = styled.div<{ visible: number }>`
-  transform: ${({ visible }) => `translateX(-${visible * 100}%)`};
-  transition: transform 0.1s linear;
+const SlideContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  cursor: grab;
 `;
 export interface IconType {
   title: string;
   imgSrc: string;
 }
-const feed: IconType[] = [
-  { title: "퍼피(~1세)", imgSrc: puppyIcon },
-  { title: "어덜트(1~7세)", imgSrc: adultIcon },
-  { title: "시니어(7세~)", imgSrc: seniorIcon },
-  { title: "건식", imgSrc: dryIcon },
-  { title: "소프트", imgSrc: softIcon },
-  { title: "습식/화식", imgSrc: wetIcon },
-  { title: "동결/건조", imgSrc: freezedIcon },
-  { title: "전체보기", imgSrc: moreIcon },
-];
+export interface IconData {
+  name: string;
+  id: string;
+  path: string;
+}
+export interface CategorySectionProps {
+  icons: {
+    feed: IconData[];
+    dessert: IconData[];
+    tool: IconData[];
+    health: IconData[];
+  };
+}
 
-const icons = {
-  feed,
-  dessert: {},
-  supplies: {},
-  health: {},
-};
-
-function CategorySection() {
-  const [visible, setVisible] = useState(0);
+function CategorySection({ icons }: CategorySectionProps) {
+  const [visible, setVisible] = useState(1);
+  const [pressed, setPressed] = useState(false);
 
   return (
     <Container>
-      <CategoryNav visible={visible} setVisible={setVisible} />
-      <ArticleContainer visible={visible}>
-        <CategoryArticle icons={icons.feed} />
-      </ArticleContainer>
+      <CategoryNav visible={Math.round(visible)} setVisible={setVisible} />
+      <SlideContainer
+        onPointerDown={() => {
+          setPressed(true);
+        }}
+        onPointerMove={(e) => {
+          if (!pressed) return;
+          setVisible((prev) => {
+            if (prev >= 0 && prev <= 3) return prev + e.movementX / 300;
+            else if (prev < 0) return 0;
+            else if (prev > 3) return 3;
+            else return prev;
+          });
+        }}
+        onPointerUp={() => {
+          setPressed(false);
+        }}
+      >
+        <CategorySlide icon={icons.feed} visible={visible} index={0} />
+        <CategorySlide icon={icons.dessert} visible={visible} index={1} />
+        <CategorySlide icon={icons.tool} visible={visible} index={2} />
+        <CategorySlide icon={icons.health} visible={visible} index={3} />
+      </SlideContainer>
     </Container>
   );
 }
 
 export default CategorySection;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await fetch(`http://localhost:3000/api/icons`);
+  const { data } = await res.json();
+  console.log("abc", data);
+  return { props: { data } };
+};
