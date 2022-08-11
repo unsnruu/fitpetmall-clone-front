@@ -1,0 +1,168 @@
+{
+  "data": {
+    "feed": [
+      {
+        "id": "feed1",
+        "name": "퍼피(~1세)",
+        "path": "/icons/feed/ic_dog_퍼피.svg"
+      },
+      {
+        "id": "feed2",
+        "name": "어덜트(1~7세)",
+        "path": "/icons/feed/ic_dog_어덜트.svg"
+      },
+      {
+        "id": "feed3",
+        "name": "시니어(7세~)",
+        "path": "/icons/feed/ic_dog_시니어.svg"
+      },
+      {
+        "id": "feed4",
+        "name": "건식",
+        "path": "/icons/feed/ic_dog_건식.svg"
+      },
+      {
+        "id": "feed5",
+        "name": "소프트",
+        "path": "/icons/feed/ic_dog_소프트.svg"
+      },
+      {
+        "id": "feed6",
+        "name": "습식/화식",
+        "path": "/icons/feed/ic_dog_화식.svg"
+      },
+      {
+        "id": "feed7",
+        "name": "동결/건조",
+        "path": "/icons/feed/ic_dog_동결건조.svg"
+      },
+      { "id": "feed8", "name": "전체보기", "path": "/icons/common/ic_plus.svg" }
+    ],
+    "dessert": [
+      {
+        "id": "dessert1",
+        "name": "껌",
+        "path": "/icons/dessert/ic_dog_껌.svg"
+      },
+      {
+        "id": "dessert2",
+        "name": "뼈/불리",
+        "path": "/icons/dessert/ic_dog_뼈불리.svg"
+      },
+      {
+        "id": "dessert3",
+        "name": "저키/트릿",
+        "path": "/icons/dessertic_dog_저키트릿.svg"
+      },
+      {
+        "id": "dessert4",
+        "name": "사사미/육포",
+        "path": "/icons/dessert/ic_dog_사시미육포.svg"
+      },
+      {
+        "id": "dessert5",
+        "name": "동결/건조",
+        "path": "/icons/dessert/ic_dog_동결건조.svg"
+      },
+      {
+        "id": "dessert6",
+        "name": "비스킷/쿠키",
+        "path": "/icons/dessert/ic_dog_비스킷쿠키.svg"
+      },
+      {
+        "id": "dessert7",
+        "name": "캔/파우치",
+        "path": "/icons/dessert/ic_dog_캔파우치.svg"
+      },
+      {
+        "id": "dessert8",
+        "name": "전체보기",
+        "path": "/icons/common/ic_plus.svg"
+      }
+    ],
+    "tool": [
+      {
+        "id": "tool1",
+        "name": "칫솔/치약",
+        "path": "/icons/tool/ic_dog_칫솔치약.svg"
+      },
+      {
+        "id": "tool2",
+        "name": "노즈워크",
+        "path": "/icons/tool/ic_dog_노즈워크.svg"
+      },
+      {
+        "id": "tool3",
+        "name": "배변용품",
+        "path": "/icons/tool/ic_dog_배변용품.svg"
+      },
+      {
+        "id": "tool4",
+        "name": "목욕용품",
+        "path": "/icons/tool/ic_dog_목욕용품.svg"
+      },
+      {
+        "id": "tool5",
+        "name": "미용/관리",
+        "path": "/icons/tool/ic_dog_미용관리.svg"
+      },
+      {
+        "id": "tool6",
+        "name": "구강/청결",
+        "path": "/icons/tool/ic_dog_구강청결.svg"
+      },
+      {
+        "id": "tool7",
+        "name": "외출/산책",
+        "path": "/icons/tool/ic_dog_외출산책.svg"
+      },
+      {
+        "id": "tool8",
+        "name": "전체보기",
+        "path": "/icons/common/ic_plus.svg/"
+      }
+    ],
+    "health": [
+      {
+        "id": "health1",
+        "name": "피부/모질",
+        "path": "/icons/health/ic_dog_소프트.svg"
+      },
+      {
+        "id": "health2",
+        "name": "건강검진",
+        "path": "/icons/health/ic_dog_건강검진.svg"
+      },
+      {
+        "id": "health3",
+        "name": "영양/보조제",
+        "path": "/icons/health/ic_dog_영양보조제.svg"
+      },
+      {
+        "id": "health4",
+        "name": "영양간식",
+        "path": "/icons/health/ic_dog_동결건조.svg"
+      },
+      {
+        "id": "health5",
+        "name": "연고/크림",
+        "path": "/icons/health/ic_dog_스킨이어.svg"
+      },
+      {
+        "id": "health6",
+        "name": "기타건강관리",
+        "path": "/icons/health/ic_dog_관절관리.svg"
+      },
+      {
+        "id": "health7",
+        "name": "눈물관리",
+        "path": "/icons/health/ic_dog_눈물관리.svg"
+      },
+      {
+        "id": "health8",
+        "name": "전체보기",
+        "path": "/icons/common/ic_plus.svg/"
+      }
+    ]
+  }
+}
