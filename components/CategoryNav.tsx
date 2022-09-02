@@ -21,6 +21,7 @@ const NavButton = styled.span<{ selected: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 interface CategoryNavProps {
